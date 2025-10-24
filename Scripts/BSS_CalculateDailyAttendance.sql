@@ -1,9 +1,9 @@
-CREATE PROCEDURE [dbo].[BSS_CalculateDailyAttendance]
-@CalculationDate DATE
+CREATE OR ALTER PROCEDURE [dbo].[BSS_CalculateDailyAttendance]
+@CalculationDate DATE,
+@BatchSize INT = 500 -- Process 500 employees at a time
 AS
 BEGIN
     SET NOCOUNT ON;
-    DECLARE @BatchSize INT = 500; -- Process 500 employees at a time
     DECLARE @ProcessedEmployees INT = 0;
     DECLARE @FailedEmployees INT = 0;
     DECLARE @StartTime DATETIME = GETDATE();

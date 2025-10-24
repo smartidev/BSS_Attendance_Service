@@ -16,6 +16,7 @@ namespace BSSCalculateAttendance
         private TimeSpan[] _runTimes;
         private int _maxRetries;
         private int _retryDelaySeconds;
+        private int _batchSize;
 
         protected override void OnStart(string[] args)
         {
@@ -23,6 +24,7 @@ namespace BSSCalculateAttendance
             // Read config values
             _maxRetries = int.TryParse(ConfigurationManager.AppSettings["RetryCount"], out int retries) ? retries : 3;
             _retryDelaySeconds = int.TryParse(ConfigurationManager.AppSettings["RetryDelaySeconds"], out int retryDelay) ? retryDelay : 30;
+            _batchSize = int.TryParse(ConfigurationManager.AppSettings["BatchSize"], out int batchSize) ? batchSize : 500;
 
             // Parse multiple run times (e.g., "09:00,13:00,18:30")
             string runTimesStr = ConfigurationManager.AppSettings["RunTimes"] ?? "09:00";
@@ -140,6 +142,7 @@ namespace BSSCalculateAttendance
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.CommandTimeout = timeoutSeconds; // 0 = infinite timeout                                                 
                 cmd.Parameters.AddWithValue("@CalculationDate", calculationDate);
+                cmd.Parameters.AddWithValue("@BatchSize", _batchSize);
                 await conn.OpenAsync();
                 await cmd.ExecuteNonQueryAsync();
             }
