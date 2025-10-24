@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36422.26
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSSCalculateAttendance", "BSSCalculateAttendance.csproj", "{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF642118-F39D-4815-A251-97D59B10ECA5}
+	EndGlobalSection
+EndGlobal
