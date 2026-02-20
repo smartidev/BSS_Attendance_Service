@@ -1,3 +1,0 @@
-C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Debug\cab1.cab
-C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Debug\BSSCalculateAttendanceService.msi
-C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Debug\BSSCalculateAttendanceService.wixpdb

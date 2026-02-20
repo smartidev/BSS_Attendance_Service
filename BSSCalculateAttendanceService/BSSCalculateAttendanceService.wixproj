@@ -22,7 +22,7 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BSSCalculateAttendance\BSSCalculateAttendance.csproj">
+    <ProjectReference Include="..\..\BSS_Attendance_Service\BSSCalculateAttendance.csproj">
       <Name>BSSCalculateAttendance</Name>
       <Project>{99b72ab6-7ea5-44b3-91b2-b4a0258f29e3}</Project>
       <Private>True</Private>

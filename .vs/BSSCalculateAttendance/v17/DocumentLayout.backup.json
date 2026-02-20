@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Work\\BSSCalculateAttendance\\",
+  "WorkspaceRootPath": "C:\\Work\\BSS_Attendance_Service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{24C70DAE-CAE0-4C96-AA96-6E31A1E7807F}|BSSCalculateAttendanceService\\BSSCalculateAttendanceService.wixproj|C:\\Work\\BSSCalculateAttendance\\BSSCalculateAttendanceService\\Product.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{24C70DAE-CAE0-4C96-AA96-6E31A1E7807F}|BSSCalculateAttendanceService\\BSSCalculateAttendanceService.wixproj|C:\\Work\\BSS_Attendance_Service\\BSSCalculateAttendanceService\\Product.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{24C70DAE-CAE0-4C96-AA96-6E31A1E7807F}|BSSCalculateAttendanceService\\BSSCalculateAttendanceService.wixproj|solutionrelative:BSSCalculateAttendanceService\\Product.wxs||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|C:\\Work\\BSSCalculateAttendance\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|C:\\Work\\BSS_Attendance_Service\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|solutionrelative:attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|C:\\Work\\BSSCalculateAttendance\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|C:\\Work\\BSS_Attendance_Service\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|solutionrelative:attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|C:\\Work\\BSSCalculateAttendance\\projectinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|C:\\Work\\BSS_Attendance_Service\\projectinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|solutionrelative:projectinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|C:\\Work\\BSSCalculateAttendance\\projectinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|C:\\Work\\BSS_Attendance_Service\\projectinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{99B72AB6-7EA5-44B3-91B2-B4A0258F29E3}|BSSCalculateAttendance.csproj|solutionrelative:projectinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -36,34 +36,36 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AttendanceService.cs",
-              "DocumentMoniker": "C:\\Work\\BSSCalculateAttendance\\AttendanceService.cs",
+              "DocumentMoniker": "C:\\Work\\BSS_Attendance_Service\\AttendanceService.cs",
               "RelativeDocumentMoniker": "AttendanceService.cs",
-              "ToolTip": "C:\\Work\\BSSCalculateAttendance\\AttendanceService.cs",
+              "ToolTip": "C:\\Work\\BSS_Attendance_Service\\AttendanceService.cs",
               "RelativeToolTip": "AttendanceService.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAYwDQAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAADwv2wAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T13:23:21.272Z"
+              "WhenOpened": "2026-01-28T13:23:21.272Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "AttendanceService.cs [Design]",
-              "DocumentMoniker": "C:\\Work\\BSSCalculateAttendance\\AttendanceService.cs",
+              "DocumentMoniker": "C:\\Work\\BSS_Attendance_Service\\AttendanceService.cs",
               "RelativeDocumentMoniker": "AttendanceService.cs",
-              "ToolTip": "C:\\Work\\BSSCalculateAttendance\\AttendanceService.cs [Design]",
+              "ToolTip": "C:\\Work\\BSS_Attendance_Service\\AttendanceService.cs [Design]",
               "RelativeToolTip": "AttendanceService.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T13:23:04.774Z"
+              "WhenOpened": "2026-01-28T13:23:04.774Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Product.wxs",
-              "DocumentMoniker": "C:\\Work\\BSSCalculateAttendance\\BSSCalculateAttendanceService\\Product.wxs",
+              "DocumentMoniker": "C:\\Work\\BSS_Attendance_Service\\BSSCalculateAttendanceService\\Product.wxs",
               "RelativeDocumentMoniker": "BSSCalculateAttendanceService\\Product.wxs",
-              "ToolTip": "C:\\Work\\BSSCalculateAttendance\\BSSCalculateAttendanceService\\Product.wxs",
+              "ToolTip": "C:\\Work\\BSS_Attendance_Service\\BSSCalculateAttendanceService\\Product.wxs",
               "RelativeToolTip": "BSSCalculateAttendanceService\\Product.wxs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwE8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-01-22T17:22:23.127Z",
               "EditorCaption": ""
@@ -72,24 +74,26 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ProjectInstaller.cs",
-              "DocumentMoniker": "C:\\Work\\BSSCalculateAttendance\\ProjectInstaller.cs",
+              "DocumentMoniker": "C:\\Work\\BSS_Attendance_Service\\ProjectInstaller.cs",
               "RelativeDocumentMoniker": "ProjectInstaller.cs",
-              "ToolTip": "C:\\Work\\BSSCalculateAttendance\\ProjectInstaller.cs",
+              "ToolTip": "C:\\Work\\BSS_Attendance_Service\\ProjectInstaller.cs",
               "RelativeToolTip": "ProjectInstaller.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAgwBQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T06:37:11.682Z"
+              "WhenOpened": "2026-01-22T06:37:11.682Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ProjectInstaller.cs [Design]",
-              "DocumentMoniker": "C:\\Work\\BSSCalculateAttendance\\ProjectInstaller.cs",
+              "DocumentMoniker": "C:\\Work\\BSS_Attendance_Service\\ProjectInstaller.cs",
               "RelativeDocumentMoniker": "ProjectInstaller.cs",
-              "ToolTip": "C:\\Work\\BSSCalculateAttendance\\ProjectInstaller.cs [Design]",
+              "ToolTip": "C:\\Work\\BSS_Attendance_Service\\ProjectInstaller.cs [Design]",
               "RelativeToolTip": "ProjectInstaller.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T06:37:05.309Z"
+              "WhenOpened": "2026-01-22T06:37:05.309Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -1,8 +1,7 @@
-C:\Work\BSSCalculateAttendance\bin\Release\BSSCalculateAttendance.exe.config
-C:\Work\BSSCalculateAttendance\bin\Release\BSSCalculateAttendance.exe
-C:\Work\BSSCalculateAttendance\bin\Release\BSSCalculateAttendance.pdb
-C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.csproj.AssemblyReference.cache
-C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.csproj.CoreCompileInputs.cache
-C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.exe
-C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.pdb
-C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.exe.config
+C:\Work\BSS_Attendance_Service\bin\Release\BSSCalculateAttendance.exe.config
+C:\Work\BSS_Attendance_Service\bin\Release\BSSCalculateAttendance.exe
+C:\Work\BSS_Attendance_Service\bin\Release\BSSCalculateAttendance.pdb
+C:\Work\BSS_Attendance_Service\obj\Release\BSSCalculateAttendance.csproj.AssemblyReference.cache
+C:\Work\BSS_Attendance_Service\obj\Release\BSSCalculateAttendance.csproj.CoreCompileInputs.cache
+C:\Work\BSS_Attendance_Service\obj\Release\BSSCalculateAttendance.exe
+C:\Work\BSS_Attendance_Service\obj\Release\BSSCalculateAttendance.pdb

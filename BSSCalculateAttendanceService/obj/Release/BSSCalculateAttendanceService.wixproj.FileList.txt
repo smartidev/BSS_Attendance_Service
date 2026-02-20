@@ -1,6 +1,6 @@
-C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Release\cab1.cab
-C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Release\BSSCalculateAttendanceService.msi
-C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Release\BSSCalculateAttendanceService.wixpdb
+C:\Work\BSS_Attendance_Service\BSSCalculateAttendanceService\bin\Release\cab1.cab
+C:\Work\BSS_Attendance_Service\BSSCalculateAttendanceService\bin\Release\BSSCalculateAttendanceService.msi
+C:\Work\BSS_Attendance_Service\BSSCalculateAttendanceService\bin\Release\BSSCalculateAttendanceService.wixpdb
 obj\Release\Product.wixobj
 obj\Release\BSSCalculateAttendanceService.wixproj.BindContentsFileListnull.txt
 obj\Release\BSSCalculateAttendanceService.wixproj.BindOutputsFileListnull.txt
