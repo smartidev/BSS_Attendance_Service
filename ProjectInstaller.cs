@@ -25,7 +25,7 @@ namespace BSSCalculateAttendance
             serviceInstaller.ServiceName = "AttendanceService";
             serviceInstaller.DisplayName = "BSS Attendance Calculation Service";
             serviceInstaller.Description = "Service for calculating attendance records";
-            serviceInstaller.StartType = ServiceStartMode.Automatic;
+            serviceInstaller.StartType = ServiceStartMode.Manual;
 
             // Add both installers to the collection
             Installers.AddRange(new Installer[]

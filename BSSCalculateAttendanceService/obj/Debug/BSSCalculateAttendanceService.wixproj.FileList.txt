@@ -1,0 +1,7 @@
+C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Debug\cab1.cab
+C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Debug\BSSCalculateAttendanceService.msi
+C:\Work\BSSCalculateAttendance\BSSCalculateAttendanceService\bin\Debug\BSSCalculateAttendanceService.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\BSSCalculateAttendanceService.wixproj.BindContentsFileListnull.txt
+obj\Debug\BSSCalculateAttendanceService.wixproj.BindOutputsFileListnull.txt
+obj\Debug\BSSCalculateAttendanceService.wixproj.BindBuiltOutputsFileListnull.txt

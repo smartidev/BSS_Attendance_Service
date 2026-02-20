@@ -1,0 +1,2 @@
+C:\Work\BSSCalculateAttendance\bin\Release\BSSCalculateAttendance.exe.config
+C:\Work\BSSCalculateAttendance\bin\Release\BSSCalculateAttendance.exe

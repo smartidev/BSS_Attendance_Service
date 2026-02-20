@@ -28,10 +28,30 @@ namespace BSSCalculateAttendance
 
             // Parse multiple run times (e.g., "09:00,13:00,18:30")
             string runTimesStr = ConfigurationManager.AppSettings["RunTimes"] ?? "09:00";
-            _runTimes = runTimesStr.Split(',')
-                                   .Select(t => TimeSpan.TryParse(t.Trim(), out var ts) ? ts : new TimeSpan(9, 0, 0))
-                                   .OrderBy(t => t)
-                                   .ToArray();
+
+            _runTimes = runTimesStr
+                .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(t =>
+                {
+                    if (TimeSpan.TryParse(t.Trim(), out var ts))
+                        return ts;
+
+                    WriteLog($"Invalid RunTime value in config: '{t}', defaulting to 09:00");
+                    return new TimeSpan(9, 0, 0);
+                })
+                .Distinct()               // avoid duplicates
+                .OrderBy(t => t)
+                .ToArray();
+
+            // Ensure at least one run time exists
+            if (_runTimes.Length == 0)
+            {
+                WriteLog("No valid RunTimes found. Defaulting to 09:00");
+                _runTimes = new[] { new TimeSpan(9, 0, 0) };
+            }
+
+            // Log final, effective run times
+            WriteLog("Run Times: " + string.Join(", ", _runTimes.Select(t => t.ToString(@"hh\:mm"))));
 
             if (_runTimes.Length == 0)
                 _runTimes = new[] { new TimeSpan(9, 0, 0) };
@@ -51,19 +71,27 @@ namespace BSSCalculateAttendance
             try
             {
                 DateTime now = DateTime.Now;
+                DateTime next;
 
-                // Find the next run time for today
-                DateTime? next = _runTimes
+                var todayRuns = _runTimes
                     .Select(rt => now.Date.Add(rt))
-                    .FirstOrDefault(dt => dt > now);
+                    .Where(dt => dt > now)
+                    .ToList();
 
-                // If all today's times passed, schedule first time tomorrow
-                if (next == null)
+                if (todayRuns.Any())
+                {
+                    next = todayRuns.Min();
+                }
+                else
+                {
                     next = now.Date.AddDays(1).Add(_runTimes.First());
+                }
 
-                _nextRunTime = next.Value;
+                _nextRunTime = next;
+
                 double interval = (_nextRunTime - now).TotalMilliseconds;
-                if (interval < 0) interval = 0;
+                if (interval < 1000)
+                    interval = 1000;
 
                 WriteLog($"Next run scheduled at: {_nextRunTime}");
 
@@ -77,16 +105,59 @@ namespace BSSCalculateAttendance
                 {
                     _timer.Stop();
                     await RunAttendanceJobAsync();
-                    ScheduleNextRun(); // re-evaluate next available run time
+                    ScheduleNextRun();
                 };
 
                 _timer.Start();
             }
             catch (Exception ex)
             {
-                WriteLog($"Error scheduling next run: {ex.Message}");
+                WriteLog($"Error scheduling next run: {ex}");
             }
         }
+
+
+        //private void ScheduleNextRun()
+        //{
+        //    try
+        //    {
+        //        DateTime now = DateTime.Now;
+
+        //        // Find the next run time for today
+        //        DateTime? next = _runTimes
+        //            .Select(rt => now.Date.Add(rt))
+        //            .FirstOrDefault(dt => dt > now);
+
+        //        // If all today's times passed, schedule first time tomorrow
+        //        if (next == null)
+        //            next = now.Date.AddDays(1).Add(_runTimes.First());
+
+        //        _nextRunTime = next.Value;
+        //        double interval = (_nextRunTime - now).TotalMilliseconds;
+        //        if (interval < 0) interval = 0;
+
+        //        WriteLog($"Next run scheduled at: {_nextRunTime}");
+
+        //        _timer?.Dispose();
+        //        _timer = new Timer(interval)
+        //        {
+        //            AutoReset = false
+        //        };
+
+        //        _timer.Elapsed += async (s, e) =>
+        //        {
+        //            _timer.Stop();
+        //            await RunAttendanceJobAsync();
+        //            ScheduleNextRun(); // re-evaluate next available run time
+        //        };
+
+        //        _timer.Start();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        WriteLog($"Error scheduling next run: {ex.Message}");
+        //    }
+        //}
 
         private async Task RunAttendanceJobAsync()
         {
@@ -128,6 +199,7 @@ namespace BSSCalculateAttendance
         private async Task ExecuteStoredProcedureAsync(TimeSpan currentRunTime)
         {
             string connStr = ConfigurationManager.ConnectionStrings["DbConn"].ConnectionString;
+            WriteLog($"Connection String: '{connStr}'");
             string procName = "BSS_CalculateDailyAttendance";
             int timeoutSeconds = int.TryParse(ConfigurationManager.AppSettings["CommandTimeoutSeconds"], out int t) ? t : 0;
 
