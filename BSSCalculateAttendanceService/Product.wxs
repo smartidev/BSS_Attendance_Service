@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Product
+    Id="*"
+    Name="BSS Attendance Calculation Service"
+    Language="1033"
+    Version="1.0.0.0"
+    Manufacturer="Smartl"
+    UpgradeCode="{A3F8E1F3-1111-2222-3333-444444444444}">
+
+    <Package
+      InstallerVersion="500"
+      Compressed="yes"
+      InstallScope="perMachine"
+      Platform="x86" />
+
+    <MajorUpgrade
+      AllowDowngrades="no"
+      DowngradeErrorMessage="A newer version is already installed." />
+
+    <MediaTemplate />
+
+    <!-- Install Directory -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="ManufacturerFolder" Name="Smarti">
+          <Directory Id="INSTALLFOLDER" Name="AttendanceService" />
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <!-- Feature -->
+    <Feature Id="ProductFeature" Title="AttendanceService" Level="1">
+      <ComponentGroupRef Id="ServiceComponents" />
+    </Feature>
+
+  </Product>
+
+  <Fragment>
+    <ComponentGroup Id="ServiceComponents" Directory="INSTALLFOLDER">
+
+      <!-- ================= EXE + SERVICE ================= -->
+      <Component
+        Id="ServiceExeComponent"
+        Guid="{B9E1E1E1-AAAA-BBBB-CCCC-111111111111}">
+
+        <File
+          Id="AttendanceServiceExe"
+          Source="$(var.BSSCalculateAttendance.TargetPath)"
+          KeyPath="yes" />
+
+        <!-- Install service (MANUAL START) -->
+        <ServiceInstall
+          Id="ServiceInstaller"
+          Type="ownProcess"
+          Name="AttendanceService"
+          DisplayName="BSS Attendance Calculation Service"
+          Description="Service for calculating attendance records"
+          Start="demand"
+          Account="LocalSystem"
+          ErrorControl="normal" />
+
+        <!-- Control service (do NOT start on install) -->
+        <ServiceControl
+          Id="ServiceControl"
+          Name="AttendanceService"
+          Stop="both"
+          Remove="uninstall"
+          Wait="yes" />
+
+      </Component>
+
+      <!-- ================= CONFIG FILE (USER EDITABLE) ================= -->
+      <Component
+        Id="ServiceConfigComponent"
+        Guid="{C2C2C2C2-DDDD-EEEE-FFFF-222222222222}"
+        NeverOverwrite="yes">
+
+        <File
+          Id="AttendanceServiceConfig"
+          Name="BSSCalculateAttendance.exe.config"
+          Source="$(var.BSSCalculateAttendance.TargetPath).config"
+          KeyPath="yes" />
+
+      </Component>
+
+    </ComponentGroup>
+  </Fragment>
+
+</Wix>
