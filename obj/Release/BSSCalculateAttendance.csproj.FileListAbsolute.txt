@@ -5,3 +5,4 @@ C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.csproj.Assembl
 C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.csproj.CoreCompileInputs.cache
 C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.exe
 C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.pdb
+C:\Work\BSSCalculateAttendance\obj\Release\BSSCalculateAttendance.exe.config
